@@ -1,0 +1,3 @@
+ Final Steps for a Smooth App Review
+1. Ensure the package name com.codebridge.learning inside your actual app code matches what you declare on the store.
+2. Set up your GitHub Pages web link for the Privacy Policy so it is a live web page (https://<username>.github.io/<repository>/PRIVACY_POLICY) rather than a raw Markdown page.
