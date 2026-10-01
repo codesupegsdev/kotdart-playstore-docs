@@ -1,13 +1,15 @@
 <div align="center">
 
-# 🚀 KotDart — Kotlin × Dart / Flutter Learning App 
+<h1>🚀 KotDart — Kotlin × Dart / Flutter Learning App</h1>
 
-![Android](https://img.shields.io/badge/Platform-Android-green.svg)
-![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-blue.svg)
-![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple.svg)
-![Flutter & Dart](https://img.shields.io/badge/CrossPlatform-Flutter%20%2F%20Dart-cyan.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Offline First](https://img.shields.io/badge/Privacy-100%25%20Offline%20First-success.svg)
+<img src="https://img.shields.io/badge/Platform-Android-green.svg" alt="Android" />
+<img src="https://img.shields.io/badge/UI-Jetpack%20Compose-blue.svg" alt="Jetpack Compose" />
+<img src="https://img.shields.io/badge/Language-Kotlin-purple.svg" alt="Kotlin" />
+<img src="https://img.shields.io/badge/CrossPlatform-Flutter%20%2F%20Dart-cyan.svg" alt="Flutter & Dart" />
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+<img src="https://img.shields.io/badge/Privacy-100%25%20Offline%20First-success.svg" alt="Offline First" />
+
+<br /><br />
 
 **KotDart** is a modern, offline-first Android learning companion built for mobile developers mastering both **Native Android (Kotlin / Jetpack Compose)** and **Cross-Platform Flutter (Dart)**. It bridges the gap between ecosystems by pairing theoretical intuition with direct side-by-side code implementations.
 
