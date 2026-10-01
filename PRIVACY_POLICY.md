@@ -2,7 +2,7 @@
 
 **Effective Date:** Oct 02, 2026  
 **App Name:** KotDart  
-**Developer:** [Your Real Full Name as it appears on Google Play Console] (Operating as KotDart)
+**Developer:** Gurjeet S (Operating as KotDart)
 **Contact Email:** support.kotdart.dev@gmail.com
 
 ---

@@ -5,3 +5,6 @@
 
 https://codesupegsdev.github.io/kotdart-playstore-docs/
 
+https://codesupegsdev.github.io/kotdart-playstore-docs/PRIVACY_POLICY.html
+
+https://codesupegsdev.github.io/kotdart-playstore-docs/TERMS_OF_SERVICE.md
