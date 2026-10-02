@@ -60,11 +60,19 @@ Every lesson in KotDart guides you through 7 progressive learning stages:
 - **Streak & Goals**: Daily learning target selector (1–5 lessons/day) and streak counter.
 - **Topic Mastery**: Skill gap analysis and recall mastery estimators.
 
-### 5. ⚙️ Profile & Customization (`SettingsScreen`)
+### 5. ⏰ Learning Schedule & Smart Alarms (`SettingsScreen`)
+- **Customizable Alarms**: Set a dedicated study time with flexible frequency modes: **Daily**, **Weekly** (with custom Sun-Sat day selection chips), and **Weekend**.
+- **Session Durations**: Choose target session lengths (5, 10, 15, or 30 minutes).
+- **Tactile & Audio Alerts**: 10-second vibration pattern and default notification sound reminders.
+- **Interactive Actions**: Direct notification buttons for **Learn Now**, **Okay**, and **Dismiss**.
+- **Smart Auto-Clearing**: Automatically cancels reminders for today if you open the app or complete a lesson early.
+
+### 6. ⚙️ Profile & Customization (`SettingsScreen`)
 - **Personalized Greeting**: Dynamic "Welcome" or "Welcome back" greeting featuring your custom name and avatar emoji.
-- **Theme Modes**: Support for Light, Dark, System, and Night Light (warm cream) themes.
+- **Theme Modes**: Support for Light, Dark, System, and Night Light (warm Sepia / espresso) themes.
 - **Font Scale Presets**: Adjustable UI text scaling (Small, Medium, Large).
 - **Developer Pro Mode**: Toggle to skip beginner stories and immediately display high-density architecture blueprint nodes.
+- **Replay Onboarding**: Option in Settings to replay the interactive app tour anytime.
 - **In-App Support & Feedback**: Built-in dialogs for contacting support (`support.kotdart.dev@gmail.com`) and developers (`feedback.kotdart.dev@gmail.com`) with pre-filled message handoff.
 - **Play Store Rating**: Direct link to rate KotDart on the Google Play Store.
 
@@ -90,13 +98,35 @@ com.codebridge.learning/
 │   ├── LessonJsonLoader.kt  # Offline JSON asset parser & validator
 │   ├── ProgressStore.kt     # SharedPreferences storage manager
 │   ├── QuizEngine.kt        # Quiz session generator & grader
-│   └── RevisionEngine.kt    # Spaced repetition & review engine
+│   ├── RevisionEngine.kt    # Spaced repetition & review engine
+│   ├── ReminderScheduler.kt # AlarmManager study reminder engine
+│   ├── LearningReminderReceiver.kt # Notification broadcast receiver (Learn Now, Okay, Dismiss)
+│   └── BootReceiver.kt      # Device reboot alarm restorer
 ├── ui/                      # Presentation layer (Jetpack Compose)
 │   ├── components/          # Reusable UI widgets (CodeBlock, InteractivePreview, FlowDiagram)
-│   ├── screens/             # App screens (Home, LessonDetail, Practice, Compare, Quiz, Settings, Progress)
+│   ├── screens/             # App screens (Home, LessonDetail, Practice, Compare, Quiz, Settings, Progress, Onboarding)
 │   └── theme/               # Material 3 Color scheme, Typography, and UI tokens
 └── MainActivity.kt          # Root Activity & Navigation orchestration
 ```
+
+---
+
+## 🔐 Permissions Required & System Compliance
+
+KotDart is designed to respect user privacy and operates with minimal system permissions:
+- **`POST_NOTIFICATIONS`** (Android 13+ / API 33+): Required to display study reminder notifications and learning streak alerts.
+- **`RECEIVE_BOOT_COMPLETED`**: Automatically restores active learning schedule alarms if the device restarts.
+- **`VIBRATE`**: Powers the tactile 10-second vibration alert for study alarms.
+- *Note:* Requires **zero** dangerous runtime permissions (no location, camera, microphone, or external storage access required).
+
+---
+
+## 🏛️ Project Architecture & Data Safety Proof
+
+KotDart follows a clean, modular Model-View-ViewModel (MVVM) and Unidirectional Data Flow (UDF) architecture built with Jetpack Compose:
+- **Data Layer (`data/`)**: Manages local persistence (`ProgressStore`), offline JSON asset loading (`LessonJsonLoader`), quiz generation (`QuizEngine`), spaced repetition (`RevisionEngine`), and alarm scheduling (`ReminderScheduler`).
+- **Presentation Layer (`ui/`)**: Composable screens and modular components driven by reactive Jetpack Compose state.
+- **Data Safety Guarantee**: All data resides strictly in local device storage. No user data, analytics, or telemetry are transmitted externally.
 
 ---
 
@@ -104,9 +134,9 @@ com.codebridge.learning/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/codesupegsdev/kotdart.git
+   git clone https://github.com/your-username/kotdart.git
    ```
-2. Open the project in **Android Studio** (Electric Eel or newer).
+2. Open the project in **Android Studio**.
 3. Ensure you have **JDK 17** installed.
 4. Sync Gradle files and run the `app` configuration on an emulator or physical device.
 
