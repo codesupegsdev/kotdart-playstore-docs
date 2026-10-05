@@ -91,7 +91,7 @@ KotDart is engineered with strict privacy guarantees:
 ## 📁 Project Architecture
 
 ```
-com.codebridge.learning/
+com.kotdart.learning/
 ├── data/                    # Data layer & local persistence
 │   ├── model/               # Data classes (Lesson, Challenge, QuizQuestion, etc.)
 │   ├── repository/          # LessonRepository & LearningContent catalog
